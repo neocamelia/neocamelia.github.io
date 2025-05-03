@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Lapin blanc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="offline.css">
+</head>
+<body class="offline-page">
+    <section>
+        <h1>Lapin blanc</h1>
+        <h3>Si vous êtes arrivé sur cette page, c’est que vous souhaitez me contacter.</h3>
+        <h3>Je dois m'assurer que vous êtes bien localisé à <address>Genève, Suisse</address></h3>
+        <p>Voici la procédure à suivre:</p>
+        <ol>
+            <li>Installez l'application <a id="telegram-link" href="#" target="_blank">Telegram</a>, nécessaire pour me contacter.</li>
+            <li><address>Rue Adrien-Lachenal 17, 1207 Genève</address></li>
+            <li>Sonnez et attendez qu’on vienne à votre rencontre.</li>
+            <li>Dite la phrase-de-passe suivante : <strong>Dans le genre flic, t'es pas au top, alors pas le temps de jouer à question-réponse. T'écoutes ou tu te barres ?</strong></li>
+        </ol>
+    </section>
+</body>
+<script>
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  const telegramLink = document.getElementById('telegram-link');
+
+  if (/android/i.test(userAgent)) {
+    // Appareil Android
+    telegramLink.href = "https://play.google.com/store/apps/details?id=org.telegram.messenger";
+  } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    // Appareil iOS
+    telegramLink.href = "https://apps.apple.com/app/telegram-messenger/id686449807";
+  } else {
+    // Ordinateur (ou inconnu)
+    telegramLink.href = "https://web.telegram.org/";
+  }
+</script>
+</html>
