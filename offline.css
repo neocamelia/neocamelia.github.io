@@ -1,0 +1,20 @@
+.offline-page h3, .offline-page p {
+   margin-top: 32px;
+}
+
+.offline-page ul li {
+    margin: 16px 0;
+}
+
+.offline-page button {
+    background-color: #00FF00;
+    color: black;
+    border: none;
+    padding: 8px 24px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.offline-page button:hover {
+    background-color: #00CC00;
+}
